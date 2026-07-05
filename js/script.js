@@ -14,7 +14,7 @@ console.log(Number(rem[1]));
 
 console.log(rem);
 
-st = { 'click': false, remain: rem, int: null };
+st = { 'click': false, remain: rem, int: null ,current:5};
 let min = 1;
 let play = () => {
     rem = time.innerHTML.split(':')
@@ -72,7 +72,7 @@ let play = () => {
         st.clicked = false;
         min = null;
         btn.innerHTML = 'start';
-        time.innerHTML = '0:05:0'
+        time.innerHTML = `0:${st.current}:00`
     })
 
 
@@ -89,7 +89,8 @@ ch_btn.forEach(ch => {
         min = null;
         btn.innerHTML = 'start';        
         rem[1] = Number(ch.id);
-        time.innerHTML = `${rem[0]}:${rem[1]}:${rem[2]}`
+        time.innerHTML = `0:${rem[1]}:00`
+        st.current = Number(ch.id);
 
     })
 })
