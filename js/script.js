@@ -87,9 +87,7 @@ ch_btn.forEach(ch => {
         st.int = null;
         st.clicked = false;
         min = null;
-        btn.innerHTML = 'start';
-        console.log((ch.innerHTML.substring(0,1)));
-        
+        btn.innerHTML = 'start';        
         rem[1] = Number(ch.id);
         time.innerHTML = `${rem[0]}:${rem[1]}:${rem[2]}`
 
