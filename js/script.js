@@ -2,13 +2,11 @@ let h = 0;
 let m = 0;
 let s = 0;
 
-let hb = document.getElementById("h");
-let mb = document.getElementById("m");
-let sb = document.getElementById("s");
+let time = document.getElementById('time')
 let btn = document.getElementById('play');
 let hid_btn = document.querySelector('#reset');
 clicked = false;
-st = {'click':false,remain_h:Number(hb.innerHTML),remain_m:Number(mb.innerHTML),remain_s:Number(sb.innerHTML),int:null};
+st = {'click':false,remain:Number(time.innerHTML),int:null};
 let min = 1;
 let play = () => {
     var int;
